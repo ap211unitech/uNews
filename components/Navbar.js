@@ -13,7 +13,7 @@ const Navbar = () => {
             setActive(router.query.category);
         }
         else {
-            setActive('');
+            setActive('general');
         }
     }, [router.query])
 
@@ -40,6 +40,7 @@ const Navbar = () => {
                     })}
                 </ul>
             </div>
+            <hr />
 
         </Fragment >
     )
