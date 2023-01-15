@@ -23,6 +23,11 @@ export default Query
 
 export async function getServerSideProps({ query }) {
     const { q } = query;
+    if (!q) {
+        return {
+            notFound: true
+        }
+    }
 
     const res = await fetch(`https://gnews.io/api/v4/search?q=${q}&token=4f48db13caf574dc1bf3971fd62ce8e2&lang=en&country=in`);
     const newslist = await res.json();
