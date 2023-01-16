@@ -12,7 +12,7 @@ const NewsCard = ({ news }) => {
 
             <div>
                 <p className="p-4 text-right text-gray-500 italic text-sm">
-                    <Link href={news.source.url} className='text-red-600 hover:text-red-700 mr-4'>
+                    <Link href={news.source.url} target="_blank" className='text-red-600 hover:text-red-700 mr-4'>
                         {news.source.name}
                     </Link>
                     <span className='capitalize'>- {moment.utc(news.published_at).fromNow(true).toString()} ago</span>
